@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO tags -->
+<title>Ramya S | Yoga Website Design | Reasonably Priced, One-Time Build</title>
+<meta name="description" content="Ramya S builds custom, reasonably priced yoga websites — a software engineer with an M.Sc. in Yoga Therapy. SEO-ready pages, mobile-friendly design, online booking, and a one-time build fee — no monthly or yearly subscriptions.">
+<meta name="keywords" content="Ramya S, Ramya S yoga website designer, yoga website design, yoga studio website, yoga teacher website, affordable yoga website, yoga website SEO, website for yoga therapist, yoga booking website, no monthly subscription website, no yearly subscription, one-time payment website">
+<meta name="author" content="Ramya S">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://buildwithyoga.example.com/">
+
+<!-- Open Graph / social sharing tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ramya S | Yoga Website Design | Reasonably Priced, One-Time Build">
+<meta property="og:description" content="Ramya S — software engineer and M.Sc. in Yoga Therapy — builds reasonably priced, SEO-ready yoga websites. No monthly or yearly subscriptions.">
+<meta property="og:url" content="https://buildwithyoga.example.com/">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ramya S | Yoga Website Design | Reasonably Priced, One-Time Build">
+<meta name="twitter:description" content="Ramya S builds reasonably priced yoga websites for teachers, therapists, and studios. SEO-ready, mobile-friendly, no subscriptions.">
+
+<!-- Structured data for Google (JSON-LD, schema.org Service) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Yoga Website Design",
+  "provider": {
+    "@type": "Person",
+    "name": "Ramya S",
+    "email": "buildwithyoga@gmail.com",
+    "telephone": "+91-97313-13047",
+    "sameAs": "https://www.linkedin.com/in/ramyas86/",
+    "jobTitle": "Software Engineer, M.Sc. Yoga Therapy (S-VYASA)"
+  },
+  "areaServed": "IN",
+  "description": "Reasonably priced, fully automated yoga websites for teachers, therapists, and studios, built by Ramya S. One-time build fee, no monthly or yearly subscriptions, SEO-ready pages, mobile-friendly design, online payments, and class scheduling.",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "INR",
+    "description": "One-time website build fee. No monthly or yearly subscriptions."
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --linen:#FAF7F1;
+    --card:#FFFFFF;
+    --ink:#1E2B22;
+    --ink-soft:#465148;
+    --gold:#B8935A;
+    --gold-soft:#DCC79A;
+    --sage:#7E9683;
+    --line:#E5DFD1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@media(prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; }
+}
+
+body{
+    background:#EFEAE0;
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+}
+
+.container{
+    width:100%;
+    margin:auto;
+    background:var(--linen);
+    box-shadow:0 20px 60px rgba(30,43,34,.12);
+}
+
+/* On laptop/desktop widths, let inner sections breathe with wider side padding
+   instead of capping the container itself, so the design fills the screen. */
+@media(min-width:1400px){
+    .hero, .tagline, .section, footer{ padding-left:120px; padding-right:120px; }
+    .pricing{ margin-left:120px; margin-right:120px; }
+}
+
+.eyebrow{
+    font-size:13px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--sage);
+    font-weight:600;
+}
+
+/* ---------------- Hero ---------------- */
+
+.hero{
+    padding:70px 60px;
+    display:grid;
+    grid-template-columns:1.3fr 0.7fr;
+    gap:40px;
+    align-items:center;
+    position:relative;
+    border-bottom:1px solid var(--line);
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:62px;
+    line-height:1.08;
+    margin-top:18px;
+    color:var(--ink);
+}
+
+.hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+    font-weight:500;
+}
+
+.hero p{
+    margin-top:26px;
+    font-size:18px;
+    line-height:1.75;
+    max-width:560px;
+    color:var(--ink-soft);
+}
+
+/* breathing ring signature */
+.breath-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.breath-ring{
+    position:relative;
+    width:clamp(240px, 22vw, 400px);
+    height:clamp(240px, 22vw, 400px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.ring{
+    position:absolute;
+    border-radius:50%;
+    border:1px solid var(--gold-soft);
+}
+
+.ring.r1{ width:100%; height:100%; animation:breathe 7s ease-in-out infinite; }
+.ring.r2{ width:76%; height:76%; border-color:var(--sage); opacity:.6; animation:breathe 7s ease-in-out infinite; animation-delay:.4s; }
+.ring.r3{ width:52%; height:52%; opacity:.4; animation:breathe 7s ease-in-out infinite; animation-delay:.8s; }
+
+@keyframes breathe{
+    0%,100%{ transform:scale(.92); opacity:.5; }
+    50%{ transform:scale(1.04); opacity:1; }
+}
+
+.lotus-icon{ width:clamp(46px, 4vw, 76px); height:clamp(46px, 4vw, 76px); color:var(--gold); position:relative; z-index:2; }
+
+/* ---------------- Tagline / pull-quote ---------------- */
+
+.tagline{
+    padding:50px 60px;
+    display:flex;
+    gap:28px;
+    align-items:flex-start;
+    border-bottom:1px solid var(--line);
+}
+
+.tagline .mark{
+    font-family:'Cormorant Garamond',serif;
+    font-size:64px;
+    line-height:1;
+    color:var(--gold-soft);
+    font-weight:600;
+}
+
+.tagline h2{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:32px;
+    color:var(--ink);
+    line-height:1.35;
+}
+
+.tagline p{
+    margin-top:12px;
+    font-size:17px;
+    color:var(--ink-soft);
+    line-height:1.7;
+    max-width:640px;
+}
+
+/* ---------------- Included ---------------- */
+
+.section{
+    padding:60px 60px 20px;
+}
+
+.section-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:36px;
+}
+
+.section h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:40px;
+    color:var(--ink);
+}
+
+.rule{
+    flex:1;
+    height:1px;
+    background:var(--line);
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:50px;
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.feature svg{
+    width:26px;
+    height:26px;
+    color:var(--sage);
+    flex-shrink:0;
+}
+
+.feature span{
+    font-size:17px;
+    color:var(--ink);
+}
+
+/* ---------------- Pricing ---------------- */
+
+.pricing{
+    margin:20px 60px 60px;
+    padding:44px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    position:relative;
+}
+
+.pricing .section-head{ margin-bottom:10px; }
+
+.ribbon{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--sage);
+    font-weight:600;
+    margin-bottom:36px;
+}
+
+.ribbon::before{
+    content:"";
+    width:20px;
+    height:1px;
+    background:var(--sage);
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px 44px;
+}
+
+.card{
+    display:flex;
+    gap:18px;
+}
+
+.card svg{
+    width:30px;
+    height:30px;
+    color:var(--gold);
+    flex-shrink:0;
+    margin-top:2px;
+}
+
+.card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--ink);
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:var(--ink-soft);
+    line-height:1.7;
+    font-size:16px;
+}
+
+/* ---------------- Footer ---------------- */
+
+footer{
+    background:var(--ink);
+    color:var(--linen);
+    padding:44px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+footer h3{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:26px;
+    color:var(--gold-soft);
+}
+
+.contact-list{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    align-items:flex-end;
+}
+
+.contact-list p{
+    font-size:16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.contact-list svg{
+    width:17px;
+    height:17px;
+    color:var(--gold-soft);
+}
+
+.terms{
+    text-align:center;
+    font-size:13px;
+    padding:16px;
+    color:var(--ink-soft);
+    background:var(--linen);
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media(max-width:900px){
+
+.hero{
+    grid-template-columns:1fr;
+    padding:44px 30px;
+    text-align:center;
+}
+
+.hero p{ margin-left:auto; margin-right:auto; }
+
+.hero h1{ font-size:42px; }
+
+.breath-wrap{ order:-1; }
+
+.breath-ring{ width:150px; height:150px; }
+
+.tagline{
+    flex-direction:column;
+    padding:36px 30px;
+    text-align:center;
+}
+
+.tagline .mark{ display:none; }
+
+.section{ padding:44px 26px 10px; }
+
+.section h2{ font-size:30px; }
+
+.features{ grid-template-columns:1fr; }
+
+.pricing{ margin:10px 20px 44px; padding:30px 26px; }
+
+.cards{ grid-template-columns:1fr; gap:30px; }
+
+footer{
+    flex-direction:column;
+    text-align:center;
+    padding:36px 30px;
+}
+
+.contact-list{ align-items:center; }
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<section class="hero">
+
+<div>
+<div class="eyebrow">Ramya S &middot; Websites for yoga teachers &amp; studios</div>
+<h1>Build calm,<br>capable <em>yoga</em> websites.</h1>
+<p>
+A software engineer with an M.Sc. in Yoga Therapy from S-VYASA —
+bringing both technical craft and a real understanding of what yoga
+teachers, therapists, and studios actually need from a reasonably
+priced website.
+</p>
+</div>
+
+<div class="breath-wrap">
+<div class="breath-ring">
+<div class="ring r1"></div>
+<div class="ring r2"></div>
+<div class="ring r3"></div>
+<svg class="lotus-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 44c-8 0-13-6-13-13 4 0 8 2 10 5 1-4 1-9-1-14-2 5-6 8-11 8 1-8 7-13 15-13s14 5 15 13c-5 0-9-3-11-8-2 5-2 10-1 14 2-3 6-5 10-5 0 7-5 13-13 13z"/>
+<circle cx="24" cy="22" r="2.2" fill="currentColor" stroke="none"/>
+</svg>
+</div>
+</div>
+
+</section>
+
+<section class="tagline">
+<div class="mark">&ldquo;</div>
+<div>
+<h2>Code with purpose, design with understanding.</h2>
+<p>
+I create fully automated, professional yoga websites that let you focus
+on teaching while your website handles the routine work.
+</p>
+</div>
+</section>
+
+<section class="section">
+
+<div class="section-head">
+<h2>What's included</h2>
+<div class="rule"></div>
+</div>
+
+<div class="features">
+
+<div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="4" width="19" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>
+<span>Custom website design</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2.5" width="10" height="19" rx="1.8"/><path d="M11 18.5h2"/></svg>
+<span>Mobile-friendly on all devices</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></svg>
+<span>SEO-ready pages &amp; Google ranking support</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.3-3.4A7.96 7.96 0 0 1 4 12Z"/></svg>
+<span>WhatsApp integration</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg>
+<span>Secure contact &amp; enquiry forms</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c0-4 3-6.5 7-6.5s7 2.5 7 6.5"/></svg>
+<span>Student registration</span>
+</div>
+
+</div>
+
+<div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="1.8"/><path d="M2.5 9.5h19"/></svg>
+<span>Payment integration</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a5 5 0 0 0-5 5v3.5L5 16h14l-2-4.5V8a5 5 0 0 0-5-5Z"/><path d="M10 19a2 2 0 0 0 4 0"/></svg>
+<span>Automated confirmations &amp; reminders</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="18" height="16" rx="1.5"/><path d="M3 9.5h18M7.5 2.5v4M16.5 2.5v4"/></svg>
+<span>Live class schedule</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.8Z"/></svg>
+<span>Review &amp; testimonial collection</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4.5h13.5A2.5 2.5 0 0 1 20 7v13H6.5A2.5 2.5 0 0 1 4 17.5v-13Z"/><path d="M8 9h8M8 12.5h8M8 16h5"/></svg>
+<span>Blog &amp; wellness articles</span>
+</div>
+
+<div class="feature">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.4 7-11.6A7 7 0 0 0 5 9.4C5 14.6 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.4"/></svg>
+<span>Google Maps &amp; social media links</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="pricing">
+
+<div class="section-head">
+<h2>How pricing works</h2>
+<div class="rule"></div>
+</div>
+
+<div class="ribbon">Reasonably priced &middot; One-time build</div>
+
+<div class="cards">
+
+<div class="card">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 3H5a2 2 0 0 0-2 2v6l10 10 8-8L11 3Z"/><circle cx="7.5" cy="7.5" r="1.3" fill="currentColor" stroke="none"/></svg>
+<div>
+<h3>One build. Yours to keep.</h3>
+<p>
+Most website platforms charge recurring monthly fees. I don't.
+Your website is built for a one-time fee, and once completed,
+you own it completely.
+</p>
+</div>
+</div>
+
+<div class="card">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/></svg>
+<div>
+<h3>No hidden charges</h3>
+<p>
+Any third-party costs such as payment gateways, premium plugins,
+hosting upgrades or SMS/WhatsApp services will always be discussed
+and approved before implementation.
+</p>
+</div>
+</div>
+
+<div class="card">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a7.4 7.4 0 0 0 0-3l2-1.5-2-3.4-2.3.9a7.6 7.6 0 0 0-2.6-1.5L14 2.5h-4l-.5 2.5a7.6 7.6 0 0 0-2.6 1.5l-2.3-.9-2 3.4 2 1.5a7.4 7.4 0 0 0 0 3l-2 1.5 2 3.4 2.3-.9c.8.65 1.65 1.15 2.6 1.5l.5 2.5h4l.5-2.5c.95-.35 1.8-.85 2.6-1.5l2.3.9 2-3.4-2-1.5Z"/></svg>
+<div>
+<h3>Ongoing assistance</h3>
+<p>
+Need maintenance, renewals, redesigns or new features later?
+I'm always happy to help whenever required.
+</p>
+</div>
+</div>
+
+<div class="card">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7.5" width="18" height="12" rx="1.8"/><path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5"/></svg>
+<div>
+<h3>No subscriptions. No surprises.</h3>
+<p>
+No monthly subscriptions. No yearly subscriptions. No auto-renewals.
+No hidden software fees. No surprise charges.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Let's build something calm.</h3>
+
+<div class="contact-list">
+<p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg> buildwithyoga@gmail.com</p>
+<p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.3-3.4A7.96 7.96 0 0 1 4 12Z"/></svg> +91 97313 13047 &middot; Phone &amp; WhatsApp</p>
+<p><a href="https://www.linkedin.com/in/ramyas86/" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none;display:flex;align-items:center;gap:10px;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4.2c0-1.5 1-2.3 2.3-2.3 1.2 0 2.2.8 2.2 2.3V17"/></svg> linkedin.com/in/ramyas86</a></p>
+</div>
+
+</footer>
+
+<div class="terms">
+* Terms &amp; Conditions apply. Detailed Terms &amp; Conditions will be provided with the project quotation.
+</div>
+
+</div>
+
+</body>
+</html>
