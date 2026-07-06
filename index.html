@@ -344,6 +344,53 @@ footer{
     font-size:16px;
 }
 
+.pricing-note{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    margin-top:40px;
+    padding:26px 32px;
+    background:var(--linen);
+    border:1px solid var(--line);
+    border-radius:4px;
+}
+
+.pricing-note .divider{
+    width:1px;
+    align-self:stretch;
+    background:var(--line);
+    flex:0 0 1px;
+}
+
+.pricing-note > div:not(.divider){
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    flex:1;
+}
+
+.pricing-note svg{
+    width:24px;
+    height:24px;
+    color:var(--gold);
+    flex-shrink:0;
+    margin-top:2px;
+}
+
+.pricing-note h4{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--ink);
+    font-size:19px;
+    margin-bottom:4px;
+}
+
+.pricing-note p{
+    color:var(--ink-soft);
+    line-height:1.6;
+    font-size:15px;
+}
+
 /* ---------------- Footer ---------------- */
 
 footer{
@@ -351,10 +398,10 @@ footer{
     color:var(--linen);
     padding:44px 60px;
     display:flex;
-    justify-content:space-between;
+    flex-direction:column;
     align-items:center;
-    flex-wrap:wrap;
-    gap:20px;
+    text-align:center;
+    gap:26px;
 }
 
 footer h3{
@@ -366,10 +413,10 @@ footer h3{
 }
 
 .contact-list{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    align-items:flex-end;
+    display:grid;
+    grid-template-columns:repeat(3, max-content);
+    justify-content:center;
+    gap:16px 36px;
 }
 
 .contact-list p{
@@ -377,6 +424,7 @@ footer h3{
     display:flex;
     align-items:center;
     gap:10px;
+    margin:0;
 }
 
 .contact-list svg{
@@ -429,13 +477,28 @@ footer h3{
 
 .cards{ grid-template-columns:1fr; gap:30px; }
 
+.pricing-note{ flex-direction:column; align-items:stretch; gap:22px; }
+
+.pricing-note .divider{ width:100%; height:1px; }
+
 footer{
     flex-direction:column;
     text-align:center;
     padding:36px 30px;
 }
 
-.contact-list{ align-items:center; }
+.contact-list{
+    grid-template-columns:repeat(2, max-content);
+}
+
+}
+
+@media(max-width:480px){
+
+.contact-list{
+    grid-template-columns:1fr;
+    justify-items:center;
+}
 
 }
 </style>
@@ -617,6 +680,34 @@ I'm always happy to help whenever required.
 <p>
 No monthly subscriptions. No yearly subscriptions. No auto-renewals.
 No hidden software fees. No surprise charges.
+</p>
+</div>
+</div>
+
+</div>
+
+<div class="pricing-note">
+<div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3Z"/><path d="M5 16l.8 2.2L8 19l-2.2.8L5 22l-.8-2.2L2 19l2.2-.8L5 16Z"/></svg>
+<div>
+<h4>Fair pricing, thoughtfully set</h4>
+<p>
+Every studio and teacher has different needs, so pricing is worked
+out together rather than off a fixed list — based on your goals and
+features, so you always feel it reflects genuine value.
+</p>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 5c-2.5 4.6-9.5 9-9.5 9Z"/></svg>
+<div>
+<h4>A relationship, not just a transaction</h4>
+<p>
+More than a one-off project, I hope to build something lasting —
+grounded in trust, care, and consistently good work.
 </p>
 </div>
 </div>
