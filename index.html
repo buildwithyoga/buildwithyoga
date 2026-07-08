@@ -295,6 +295,440 @@ footer{
     color:var(--ink);
 }
 
+/* ---------------- Samples ---------------- */
+
+.samples-head{
+    margin-top:54px;
+    margin-bottom:30px;
+}
+
+.samples-head h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:28px;
+    color:var(--ink);
+}
+
+.samples{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+    margin-top:6px;
+}
+
+.sample-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+}
+
+.sample-chrome{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    padding:12px 16px;
+    border-bottom:1px solid var(--line);
+    background:var(--linen);
+}
+
+.sample-chrome span{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--line);
+}
+
+.sample-chrome span:nth-child(1){ background:var(--gold-soft); }
+
+.sample-label{
+    margin-left:6px;
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    opacity:.7;
+}
+
+.sample-body{
+    padding:22px 22px 24px;
+}
+
+.sample-body h4{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:19px;
+    color:var(--ink);
+    margin-bottom:4px;
+}
+
+.sample-body > p.sample-caption{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+    line-height:1.5;
+}
+
+/* schedule mock */
+
+.sched-days{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:6px;
+    margin-bottom:14px;
+}
+
+.sched-day{
+    text-align:center;
+    padding:8px 2px;
+    border-radius:4px;
+    background:var(--linen);
+    border:1px solid var(--line);
+}
+
+.sched-day.active{
+    background:var(--ink);
+    border-color:var(--ink);
+}
+
+.sched-day .d{
+    display:block;
+    font-size:10px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+}
+
+.sched-day.active .d{ color:var(--gold-soft); }
+
+.sched-day .n{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:16px;
+    color:var(--ink);
+    margin-top:2px;
+}
+
+.sched-day.active .n{ color:var(--linen); }
+
+.sched-slot{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    margin-bottom:10px;
+}
+
+.sched-slot:last-of-type{ margin-bottom:0; }
+
+.sched-slot .info{ display:flex; flex-direction:column; gap:2px; }
+
+.sched-slot .time{
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--sage);
+    font-weight:600;
+}
+
+.sched-slot .name{
+    font-size:14px;
+    color:var(--ink);
+}
+
+.sched-slot .seats{
+    font-size:11px;
+    color:var(--ink-soft);
+}
+
+.mock-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    padding:7px 16px;
+    background:var(--ink);
+    color:var(--linen);
+    border-radius:20px;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:.03em;
+    white-space:nowrap;
+}
+
+.mock-btn.ghost{
+    background:transparent;
+    border:1px solid var(--gold-soft);
+    color:var(--gold);
+}
+
+/* payment mock */
+
+.pay-summary{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    padding-bottom:16px;
+    margin-bottom:16px;
+    border-bottom:1px dashed var(--line);
+}
+
+.pay-summary .what{
+    font-size:14px;
+    color:var(--ink-soft);
+}
+
+.pay-summary .amt{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:26px;
+    color:var(--ink);
+}
+
+.pay-field{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:11px 14px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    margin-bottom:10px;
+    font-size:13px;
+    color:var(--ink-soft);
+}
+
+.pay-field svg{
+    width:16px;
+    height:16px;
+    color:var(--sage);
+    flex-shrink:0;
+}
+
+.pay-field-row{
+    display:flex;
+    gap:10px;
+}
+
+.pay-field-row .pay-field{ flex:1; }
+
+.pay-cta{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:16px;
+}
+
+.pay-secure{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    font-size:11px;
+    color:var(--ink-soft);
+}
+
+.pay-secure svg{
+    width:13px;
+    height:13px;
+    color:var(--sage);
+}
+
+/* registration mock */
+
+.reg-field{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    margin-bottom:12px;
+}
+
+.reg-field label{
+    font-size:11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    opacity:.75;
+}
+
+.reg-field .box{
+    padding:10px 13px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    font-size:13px;
+    color:var(--ink);
+}
+
+.reg-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:11px 14px;
+    border:1px solid var(--line);
+    border-radius:5px;
+    margin-bottom:16px;
+}
+
+.reg-toggle span.label{
+    font-size:13px;
+    color:var(--ink);
+}
+
+.switch{
+    width:34px;
+    height:19px;
+    border-radius:20px;
+    background:var(--sage);
+    position:relative;
+    flex-shrink:0;
+}
+
+.switch::after{
+    content:"";
+    position:absolute;
+    top:2px; right:2px;
+    width:15px; height:15px;
+    border-radius:50%;
+    background:var(--card);
+}
+
+/* chat / confirmation mock */
+
+.chat-bg{
+    background:var(--linen);
+    border-radius:6px;
+    padding:16px;
+}
+
+.chat-bubble{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:10px;
+    border-top-left-radius:2px;
+    padding:12px 14px;
+    max-width:88%;
+    margin-bottom:8px;
+}
+
+.chat-bubble p{
+    font-size:13px;
+    color:var(--ink);
+    line-height:1.55;
+}
+
+.chat-bubble .ts{
+    display:block;
+    margin-top:6px;
+    font-size:10px;
+    color:var(--ink-soft);
+    opacity:.7;
+}
+
+.chat-bubble.out{
+    background:var(--ink);
+    border-color:var(--ink);
+    border-top-left-radius:10px;
+    border-top-right-radius:2px;
+    margin-left:auto;
+}
+
+.chat-bubble.out p{ color:var(--linen); }
+.chat-bubble.out .ts{ color:var(--gold-soft); opacity:.85; }
+
+/* review mock */
+
+.review-stars{
+    display:flex;
+    gap:3px;
+    margin-bottom:10px;
+}
+
+.review-stars svg{
+    width:15px;
+    height:15px;
+    color:var(--gold);
+}
+
+.review-quote{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:16px;
+    line-height:1.5;
+    color:var(--ink);
+    margin-bottom:16px;
+}
+
+.review-who{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.review-avatar{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:var(--sage);
+    flex-shrink:0;
+}
+
+.review-who .name{
+    font-size:13px;
+    font-weight:600;
+    color:var(--ink);
+}
+
+.review-who .sub{
+    font-size:11px;
+    color:var(--ink-soft);
+}
+
+/* blog mock */
+
+.blog-thumb{
+    height:110px;
+    border-radius:5px;
+    margin-bottom:14px;
+    background:linear-gradient(135deg, var(--sage) 0%, var(--gold-soft) 100%);
+}
+
+.blog-tag{
+    display:inline-block;
+    font-size:10px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--sage);
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.blog-mock-title{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:18px;
+    color:var(--ink);
+    margin-bottom:6px;
+}
+
+.blog-mock p.excerpt{
+    font-size:13px;
+    color:var(--ink-soft);
+    line-height:1.6;
+    margin-bottom:12px;
+}
+
+.blog-read{
+    font-size:12px;
+    font-weight:600;
+    color:var(--gold);
+    letter-spacing:.03em;
+}
+
+@media(max-width:900px){
+.samples{ grid-template-columns:1fr; }
+}
+
 /* ---------------- Pricing ---------------- */
 
 .pricing{
@@ -672,7 +1106,7 @@ dependency on me or anyone else to keep them running.
 
 <div class="feature">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="18" height="16" rx="1.5"/><path d="M3 9.5h18M7.5 2.5v4M16.5 2.5v4"/></svg>
-<span>Live class schedule</span>
+<span>Live class schedule and bookings</span>
 </div>
 
 <div class="feature">
@@ -690,6 +1124,179 @@ dependency on me or anyone else to keep them running.
 <span>Google Maps &amp; social media links</span>
 </div>
 
+</div>
+
+</div>
+
+<div class="section-head samples-head">
+<h2>See it in action</h2>
+<div class="rule"></div>
+</div>
+
+<div class="samples">
+
+<div class="sample-card">
+<div class="sample-chrome"><span></span><span></span><span></span><span class="sample-label">Sample</span></div>
+<div class="sample-body">
+<h4>Live class schedule &amp; booking</h4>
+<p class="sample-caption">Students see open slots and reserve their spot instantly.</p>
+
+<div class="sched-days">
+<div class="sched-day"><span class="d">Mon</span><span class="n">5</span></div>
+<div class="sched-day active"><span class="d">Tue</span><span class="n">6</span></div>
+<div class="sched-day"><span class="d">Wed</span><span class="n">7</span></div>
+<div class="sched-day"><span class="d">Thu</span><span class="n">8</span></div>
+<div class="sched-day"><span class="d">Fri</span><span class="n">9</span></div>
+<div class="sched-day"><span class="d">Sat</span><span class="n">10</span></div>
+</div>
+
+<div class="sched-slot">
+<div class="info">
+<span class="time">7:00 – 8:00 AM</span>
+<span class="name">Hatha Flow</span>
+<span class="seats">4 spots left</span>
+</div>
+<span class="mock-btn">Book</span>
+</div>
+
+<div class="sched-slot">
+<div class="info">
+<span class="time">6:00 – 7:00 PM</span>
+<span class="name">Restorative &amp; Yoga Nidra</span>
+<span class="seats">Fully booked</span>
+</div>
+<span class="mock-btn ghost">Waitlist</span>
+</div>
+
+</div>
+</div>
+
+<div class="sample-card">
+<div class="sample-chrome"><span></span><span></span><span></span><span class="sample-label">Sample</span></div>
+<div class="sample-body">
+<h4>Payment integration</h4>
+<p class="sample-caption">A simple, secure checkout for classes and packages.</p>
+
+<div class="pay-summary">
+<span class="what">Monthly unlimited pass</span>
+<span class="amt">&#8377;2,400</span>
+</div>
+
+<div class="pay-field">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="1.8"/><path d="M2.5 9.5h19"/></svg>
+<span>4242&nbsp;&nbsp;4242&nbsp;&nbsp;4242&nbsp;&nbsp;4242</span>
+</div>
+
+<div class="pay-field-row">
+<div class="pay-field">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="18" height="16" rx="1.5"/><path d="M3 9.5h18M7.5 2.5v4M16.5 2.5v4"/></svg>
+<span>12 / 28</span>
+</div>
+<div class="pay-field">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+<span>CVV</span>
+</div>
+</div>
+
+<div class="pay-cta">
+<span class="pay-secure">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="1.8"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+Secured payment
+</span>
+<span class="mock-btn">Pay Now</span>
+</div>
+
+</div>
+</div>
+
+<div class="sample-card">
+<div class="sample-chrome"><span></span><span></span><span></span><span class="sample-label">Sample</span></div>
+<div class="sample-body">
+<h4>Student registration</h4>
+<p class="sample-caption">New students sign up in under a minute, no account needed.</p>
+
+<div class="reg-field">
+<label>Full name</label>
+<div class="box">Ananya Rao</div>
+</div>
+
+<div class="reg-field">
+<label>Email or phone</label>
+<div class="box">ananya.rao@email.com</div>
+</div>
+
+<div class="reg-toggle">
+<span class="label">First class free trial</span>
+<div class="switch"></div>
+</div>
+
+<span class="mock-btn">Register</span>
+
+</div>
+</div>
+
+<div class="sample-card">
+<div class="sample-chrome"><span></span><span></span><span></span><span class="sample-label">Sample</span></div>
+<div class="sample-body">
+<h4>Automated confirmations &amp; reminders</h4>
+<p class="sample-caption">Students get booking confirmations and reminders without you lifting a finger.</p>
+
+<div class="chat-bg">
+
+<div class="chat-bubble">
+<p>Hi Ananya! Your spot for <strong>Hatha Flow</strong>, Tue 7:00&ndash;8:00 AM, is confirmed. See you on the mat 🌿</p>
+<span class="ts">9:14 AM</span>
+</div>
+
+<div class="chat-bubble out">
+<p>Reminder: your class starts in 1 hour. Reply RESCHEDULE if you can't make it.</p>
+<span class="ts">6:00 AM</span>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="sample-card">
+<div class="sample-chrome"><span></span><span></span><span></span><span class="sample-label">Sample</span></div>
+<div class="sample-body">
+<h4>Review &amp; testimonial collection</h4>
+<p class="sample-caption">Happy students leave reviews that build trust for new visitors.</p>
+
+<div class="review-stars">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.8Z"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.8Z"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.8Z"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.8Z"/></svg>
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.8Z"/></svg>
+</div>
+
+<p class="review-quote">&ldquo;Booking classes finally feels as calm as the practice itself.&rdquo;</p>
+
+<div class="review-who">
+<div class="review-avatar"></div>
+<div>
+<div class="name">Priya Menon</div>
+<div class="sub">Student, 8 months</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<div class="sample-card blog-mock">
+<div class="sample-chrome"><span></span><span></span><span></span><span class="sample-label">Sample</span></div>
+<div class="sample-body">
+<h4>Blog &amp; wellness articles</h4>
+<p class="sample-caption">Share your knowledge and improve your Google ranking at the same time.</p>
+
+<div class="blog-thumb"></div>
+<span class="blog-tag">Breathwork</span>
+<div class="blog-mock-title">Three pranayama practices for calmer mornings</div>
+<p class="excerpt">Simple breathing techniques your students can use before class, or on their own at home.</p>
+<span class="blog-read">Read more &rarr;</span>
+
+</div>
 </div>
 
 </div>
