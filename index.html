@@ -8,7 +8,8 @@
 
 <!-- Primary SEO tags -->
 <title>Ramya S | Yoga Website Design | Reasonably Priced, One-Time Build | How to Build a Yoga Website | BuildWithYoga</title>
-<meta name="description" content="I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—helping you reach more students, simplify class management, and focus on what you do best: teaching."><meta name="keywords" content="Ramya S, Ramya S yoga website designer, yoga website design, yoga studio website, yoga teacher website, affordable yoga website, yoga website SEO, website for yoga therapist, yoga booking website, no monthly subscription website, no yearly subscription, one-time payment website">
+<meta name="description" content="I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—with class schedules, secure payment integration, and everything you need to reach more students and focus on what you do best: teaching.">
+, <meta name="keywords" content="Ramya S, Ramya S yoga website designer, build yoga website, yoga website design, website design, web design yoga, yoga web design, yoga instructor web design India, professional online presence, yoga studio website, yoga teacher website, affordable yoga website, affordable web design for yoga business, yoga website SEO, website for yoga therapists and studios, yoga booking website, yoga website with online booking, yoga class scheduling website, class schedule, payment integration, custom yoga website, yoga business website, website for yoga instructor, wellness website design, no monthly subscription website, no yearly subscription, one-time payment website">
 <meta name="author" content="Ramya S">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://buildwithyoga.github.io/buildwithyoga/">
@@ -16,14 +17,14 @@
 <!-- Open Graph / social sharing tags -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ramya S | Yoga Website Design | Reasonably Priced, One-Time Build | How to Build a Yoga Website | BuildWithYoga">
-<meta property="og:description" content="I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—helping you reach more students, simplify class management, and focus on what you do best: teaching.">
+<meta property="og:description" content="I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—with class schedules, secure payment integration, and everything you need to reach more students and focus on what you do best: teaching.">
 <meta property="og:url" content="https://buildwithyoga.github.io/buildwithyoga/">
 <meta property="og:locale" content="en_IN">
 
 <!-- Twitter card tags -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ramya S | Yoga Website Design | Reasonably Priced, One-Time Build | How to Build a Yoga Website | BuildWithYoga">
-<meta name="twitter:description" content="I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—helping you reach more students, simplify class management, and focus on what you do best: teaching.">
+<meta name="twitter:description" content="I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—with class schedules, secure payment integration, and everything you need to reach more students and focus on what you do best: teaching.">
 
 <!-- Structured data for Google (JSON-LD, schema.org Service) -->
 <script type="application/ld+json">
@@ -40,7 +41,8 @@
     "jobTitle": "Software Engineer, M.Sc. Yoga Therapy (S-VYASA)"
   },
   "areaServed": "IN",
-  "description": "I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—helping you reach more students, simplify class management, and focus on what you do best: teaching.",
+  "keywords": "yoga website design, build yoga website, class schedule, payment integration, yoga booking website, professional online presence, affordable yoga website",
+  "description": "I design beautiful, SEO-friendly websites for yoga teachers, therapists, and studios—with class schedules, secure payment integration, and everything you need to reach more students and focus on what you do best: teaching.",
   "offers": {
     "@type": "Offer",
     "priceCurrency": "INR",
@@ -51,7 +53,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Work+Sans:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -131,6 +133,82 @@ footer{
     font-weight:600;
 }
 
+/* ---------------- Botanical accents ---------------- */
+
+.script-accent{
+    font-family:'Dancing Script',cursive;
+    font-weight:700;
+    letter-spacing:.01em;
+}
+
+.corner-leaf{
+    position:absolute;
+    width:78px;
+    height:104px;
+    color:var(--sage);
+    opacity:.55;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.corner-leaf--tl{ top:-6px; left:-2px; }
+.corner-leaf--tr{ top:230px; right:-2px; transform:scaleX(-1); }
+.corner-leaf--bl{ bottom:-6px; left:-2px; transform:scaleY(-1); color:var(--gold-soft); }
+.corner-leaf--br{ bottom:-6px; right:-2px; transform:scale(-1,-1); color:var(--gold-soft); }
+
+footer .corner-leaf{ opacity:.4; }
+
+@media(max-width:760px){
+    .corner-leaf{ display:none; }
+}
+
+.leaf-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    width:100%;
+    max-width:260px;
+    margin:10px auto;
+}
+
+.leaf-divider::before,
+.leaf-divider::after{
+    content:"";
+    flex:1;
+    height:0;
+    border-top:1px dashed var(--line);
+}
+
+.leaf-divider svg{
+    width:15px;
+    height:15px;
+    color:var(--sage);
+    flex-shrink:0;
+}
+
+footer .leaf-divider::before,
+footer .leaf-divider::after{
+    border-top:1px dashed rgba(250,247,241,.25);
+}
+
+footer .leaf-divider svg{
+    color:var(--gold-soft);
+}
+
+.meditate-silhouette{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:78%;
+    height:78%;
+    transform:translate(-50%,-50%);
+    color:var(--sage);
+    opacity:.16;
+    z-index:0;
+    pointer-events:none;
+}
+
 /* ---------------- Hero ---------------- */
 
 .hero{
@@ -140,7 +218,9 @@ footer{
     gap:40px;
     align-items:center;
     position:relative;
+    z-index:0;
     border-bottom:1px solid var(--line);
+    overflow:hidden;
 }
 
 .hero h1{
@@ -912,10 +992,12 @@ footer{
     height:14px;
     transform:translateX(-50%);
     font-size:10px;
+    font-weight:600;
     letter-spacing:.14em;
     text-transform:uppercase;
-    color:var(--ink-soft);
+    color:var(--gold);
     text-align:center;
+    text-shadow:0 0 5px var(--linen), 0 0 5px var(--linen), 0 0 8px rgba(30,43,34,.35);
 }
 
 .breath-companion .bc-label span{
@@ -1072,6 +1154,9 @@ footer{
     align-items:center;
     text-align:center;
     gap:26px;
+    position:relative;
+    z-index:0;
+    overflow:hidden;
 }
 
 footer h3{
@@ -1203,8 +1288,27 @@ Are you interested in a website for your yoga practice? Let's chat.
 
 <section class="hero">
 
+<svg class="corner-leaf corner-leaf--tl" viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+<path d="M10 150 C30 120 25 80 55 40 C70 20 85 15 100 10"/>
+<ellipse cx="30" cy="120" rx="14" ry="7" transform="rotate(-35 30 120)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="45" cy="90" rx="13" ry="6.5" transform="rotate(-25 45 90)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="60" cy="65" rx="12" ry="6" transform="rotate(-15 60 65)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="78" cy="42" rx="11" ry="5.5" transform="rotate(-5 78 42)" fill="currentColor" fill-opacity=".3"/>
+</svg>
+
+<svg class="corner-leaf corner-leaf--tr" viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+<path d="M10 150 C30 120 25 80 55 40 C70 20 85 15 100 10"/>
+<ellipse cx="30" cy="120" rx="14" ry="7" transform="rotate(-35 30 120)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="45" cy="90" rx="13" ry="6.5" transform="rotate(-25 45 90)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="60" cy="65" rx="12" ry="6" transform="rotate(-15 60 65)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="78" cy="42" rx="11" ry="5.5" transform="rotate(-5 78 42)" fill="currentColor" fill-opacity=".3"/>
+</svg>
+
 <div>
-<div class="eyebrow">Ramya S &middot; Websites for Yoga</div>
+<div class="eyebrow"><span class="script-accent" style="font-size:1.5em; color:var(--gold);">Ramya S</span> &middot; Websites for Yoga</div>
+<div class="leaf-divider" style="margin-left:0; justify-content:flex-start; max-width:180px;" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.4 7-11.6A7 7 0 0 0 5 9.4C5 14.6 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.4"/></svg>
+</div>
 <h1>Build calm,<br>capable <em>yoga</em> websites.</h1>
 <p>
 A software engineer with an M.Sc. in Yoga Therapy from S-VYASA —
@@ -1219,6 +1323,12 @@ Indian Yoga Association (IYA) Member &middot; IYA/2025/YP8389
 
 <div class="breath-wrap">
 <div class="breath-ring">
+<svg class="meditate-silhouette" viewBox="0 0 200 200" fill="currentColor" aria-hidden="true">
+<circle cx="100" cy="34" r="9"/>
+<ellipse cx="100" cy="60" rx="17" ry="21"/>
+<path d="M78 78 C68 90 62 106 62 120 C62 120 55 130 49 132 C44 134 42 141 47 145 C54 150 65 143 70 132 C75 140 85 145 100 145 C115 145 125 140 130 132 C135 143 146 150 153 145 C158 141 156 134 151 132 C145 130 138 120 138 120 C138 106 132 90 122 78 C112 68 88 68 78 78 Z"/>
+<path d="M46 150 C58 172 76 182 100 182 C124 182 142 172 154 150 C154 168 140 192 100 195 C60 192 46 168 46 150 Z"/>
+</svg>
 <div class="ring r1"></div>
 <div class="ring r2"></div>
 <div class="ring r3"></div>
@@ -1281,9 +1391,10 @@ conditions for growth.
 </p>
 
 <p>
-So I started building websites made specifically for the yoga
-community — ones you truly own, with no strings attached, and no
-dependency on me or anyone else to keep them running.
+So I started offering custom yoga website design — built specifically
+for yoga instructors, therapists, and studio owners — for sites you
+truly own, with no strings attached, and no dependency on me or
+anyone else to keep them running.
 </p>
 
 </section>
@@ -1293,6 +1404,10 @@ dependency on me or anyone else to keep them running.
 <div class="section-head">
 <h2>What's included</h2>
 <div class="rule"></div>
+<p style="margin-top:14px; color:var(--ink-soft); font-size:16px; max-width:560px; margin-left:auto; margin-right:auto;">
+Everything you need for an affordable, professional yoga website —
+from online booking to SEO-ready pages — built once and yours to keep.
+</p>
 </div>
 
 <div class="features">
@@ -1646,7 +1761,27 @@ space for the rest — steadily, quietly, and without fuss.
 
 <footer>
 
-<h3>Let's build something calm.</h3>
+<svg class="corner-leaf corner-leaf--bl" viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+<path d="M10 150 C30 120 25 80 55 40 C70 20 85 15 100 10"/>
+<ellipse cx="30" cy="120" rx="14" ry="7" transform="rotate(-35 30 120)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="45" cy="90" rx="13" ry="6.5" transform="rotate(-25 45 90)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="60" cy="65" rx="12" ry="6" transform="rotate(-15 60 65)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="78" cy="42" rx="11" ry="5.5" transform="rotate(-5 78 42)" fill="currentColor" fill-opacity=".3"/>
+</svg>
+
+<svg class="corner-leaf corner-leaf--br" viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+<path d="M10 150 C30 120 25 80 55 40 C70 20 85 15 100 10"/>
+<ellipse cx="30" cy="120" rx="14" ry="7" transform="rotate(-35 30 120)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="45" cy="90" rx="13" ry="6.5" transform="rotate(-25 45 90)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="60" cy="65" rx="12" ry="6" transform="rotate(-15 60 65)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="78" cy="42" rx="11" ry="5.5" transform="rotate(-5 78 42)" fill="currentColor" fill-opacity=".3"/>
+</svg>
+
+<h3 class="script-accent" style="font-size:32px; font-style:normal;">Let's build something calm.</h3>
+
+<div class="leaf-divider" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.4 7-11.6A7 7 0 0 0 5 9.4C5 14.6 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.4"/></svg>
+</div>
 
 <div class="contact-list">
 <a href="mailto:buildwithyoga@gmail.com" title="buildwithyoga@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></a>
