@@ -950,6 +950,75 @@ footer .leaf-divider svg{
     font-size:15px;
 }
 
+.pricing-freetext{
+    margin-top:32px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    text-align:center;
+}
+
+.pricing-freetext h4{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--ink);
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.pricing-freetext p{
+    color:var(--ink-soft);
+    line-height:1.7;
+    font-size:16px;
+    max-width:560px;
+    margin:0 auto;
+}
+
+/* ---------------- Pricing tiles ---------------- */
+
+.pricing-tiles{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-top:18px;
+}
+
+@media(max-width:900px){
+    .pricing-tiles{ grid-template-columns:1fr 1fr; }
+}
+
+.pricing-tile{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:12px;
+    padding:26px 18px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:6px;
+    transition:border-color .3s ease, transform .3s ease;
+}
+
+.pricing-tile:hover{
+    border-color:var(--gold-soft);
+    transform:translateY(-2px);
+}
+
+.pricing-tile svg{
+    width:24px;
+    height:24px;
+    color:var(--gold);
+    flex-shrink:0;
+}
+
+.pricing-tile h4{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--ink);
+    font-size:18px;
+    line-height:1.35;
+}
+
 /* ---------------- Breath companion (signature) ---------------- */
 
 .breath-companion{
@@ -1175,6 +1244,8 @@ footer h3{
 
 .cards{ grid-template-columns:1fr; gap:30px; }
 
+.pricing-tiles{ grid-template-columns:1fr; }
+
 .pricing-note{ flex-direction:column; align-items:stretch; gap:22px; }
 
 .pricing-note .divider{ width:100%; height:1px; }
@@ -1242,12 +1313,13 @@ footer{
 <div class="leaf-divider" style="margin-left:0; justify-content:flex-start; max-width:180px;" aria-hidden="true">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.4 7-11.6A7 7 0 0 0 5 9.4C5 14.6 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.4"/></svg>
 </div>
-<h1>Build calm,<br>capable <em>yoga</em> websites.</h1>
+<h1>Code with purpose,<br>design with <em>understanding</em>.</h1>
 <p>
 A software engineer with an M.Sc. in Yoga Therapy from S-VYASA —
 bringing both technical craft and a real understanding of what yoga
-teachers, therapists, and studios actually need from a reasonably
-priced website.
+teachers, therapists, and studios actually need. I help yoga
+professionals attract students with a professional, reasonably priced
+online presence, so they can focus on what they do best.
 </p>
 <p style="margin-top:10px; font-size:14px; opacity:0.75;">
 Indian Yoga Association (IYA) Member &middot; IYA/2025/YP8389
@@ -1295,39 +1367,14 @@ serve you — your website shouldn't be one more thing quietly
 draining your energy and income every month.
 </p>
 
-</section>
-
-<section class="tagline">
-<div class="mark">&ldquo;</div>
-<div>
-<h2>Code with purpose, design with understanding.</h2>
 <p>
-I help yoga professionals attract students by giving them a
-professional online presence, so they can focus on what they do best.
-</p>
-</div>
-</section>
-
-<section class="section story">
-
-<div class="section-head">
-<h2>Bringing technology and yoga together</h2>
-<div class="rule"></div>
-</div>
-
-<p>
-After 7+ years in software engineering, I completed my M.Sc. in Yoga
-Therapy from S-VYASA. It was a journey that changed how I see both
-fields — technology isn't just about efficiency, and yoga isn't just
-about postures. Both, at their best, are about creating the right
-conditions for growth.
-</p>
-
-<p>
-So I started offering custom yoga website design — built specifically
-for yoga instructors, therapists, and studio owners — for sites you
-truly own, with no strings attached, and no dependency on me or
-anyone else to keep them running.
+That's what led me to bring technology and yoga together — because
+both, at their best, aren't just about efficiency or postures, but
+about creating the right conditions for growth. So I started offering
+custom yoga website design, built specifically for yoga instructors,
+therapists, and studio owners — for sites you truly own, with no
+strings attached, and no dependency on me or anyone else to keep
+them running.
 </p>
 
 </section>
@@ -1597,53 +1644,68 @@ Secured payment
 <div class="rule"></div>
 </div>
 
-<div class="ribbon">Reasonably priced &middot; One-time build</div>
-
-<div class="cards">
-
-<div class="card">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 3H5a2 2 0 0 0-2 2v6l10 10 8-8L11 3Z"/><circle cx="7.5" cy="7.5" r="1.3" fill="currentColor" stroke="none"/></svg>
-<div>
-<h3>One build. Yours to keep.</h3>
-<p>
-Most website platforms charge recurring monthly fees. I don't.
-Your website is built for a one-time fee, and once completed,
-you own it completely.
+<p style="color:var(--ink-soft); line-height:1.7; font-size:16px; margin:18px 0 28px;">
+Every website is a one-time build, priced by scope &mdash; from a simple starter site to a full booking-and-payments setup for a larger studio.
 </p>
+
+<a href="pricing.html" style="display:inline-flex; align-items:center; gap:10px; padding:13px 26px; background:var(--ink); color:var(--linen); border-radius:24px; font-size:14px; font-weight:600; letter-spacing:.03em; text-decoration:none;">
+View full pricing &amp; packages
+<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+</a>
+
+<div class="ribbon" style="margin-top:36px;">Reasonably priced &middot; One-time build</div>
+
+<p style="color:var(--ink-soft); line-height:1.7; font-size:16px;">
+Unlike most agencies that host your site on their own infrastructure and start charging monthly or annual &ldquo;maintenance&rdquo; fees after the first free year, your website is built on <strong style="color:var(--ink);">Cloudflare Pages</strong>, a free hosting platform &mdash; so once it's built, you will never receive a hosting bill.
+</p>
+
+<div class="pricing-tiles">
+
+<div class="pricing-tile">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+<div>
+<h4>One-time setup, not a subscription</h4>
+
 </div>
 </div>
 
-<div class="card">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/></svg>
+<div class="pricing-tile">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>
 <div>
-<h3>No hidden charges</h3>
-<p>
-Any third-party costs such as payment gateways, premium plugins,
-hosting upgrades or SMS/WhatsApp services will always be discussed
-and approved before implementation.
-</p>
+<h4>Only your domain renews annually</h4>
+
 </div>
 </div>
 
-<div class="card">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a7.4 7.4 0 0 0 0-3l2-1.5-2-3.4-2.3.9a7.6 7.6 0 0 0-2.6-1.5L14 2.5h-4l-.5 2.5a7.6 7.6 0 0 0-2.6 1.5l-2.3-.9-2 3.4 2 1.5a7.4 7.4 0 0 0 0 3l-2 1.5 2 3.4 2.3-.9c.8.65 1.65 1.15 2.6 1.5l.5 2.5h4l.5-2.5c.95-.35 1.8-.85 2.6-1.5l2.3.9 2-3.4-2-1.5Z"/></svg>
+<div class="pricing-tile">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3Z"/><path d="M5 16l.8 2.2L8 19l-2.2.8L5 22l-.8-2.2L2 19l2.2-.8L5 16Z"/></svg>
 <div>
-<h3>Ongoing assistance</h3>
-<p>
-Need maintenance, renewals, redesigns or new features later?
-I'm always happy to help whenever required.
-</p>
+<h4>Fair pricing, thoughtfully set</h4>
+
 </div>
 </div>
 
-<div class="card">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7.5" width="18" height="12" rx="1.8"/><path d="M8 7.5V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1.5"/></svg>
+<div class="pricing-tile">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4v6h6M20 20v-6h-6"/><path d="M5.5 15a7 7 0 0 0 12.6 2.5M18.5 9a7 7 0 0 0-12.6-2.5"/></svg>
 <div>
-<h3>No subscriptions. No surprises.</h3>
-<p>
-No monthly subscriptions. No yearly subscriptions. No auto-renewals.
-No hidden software fees. No surprise charges.
-</p>
+<h4>Renewal is your choice</h4>
+
+</div>
+</div>
+
+<div class="pricing-tile">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4Z"/><path d="M9 12l2 2 4-4"/></svg>
+<div>
+<h4>No hidden charges</h4>
+
+</div>
+</div>
+
+<div class="pricing-tile">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 12h8M8 16h5"/><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v13l-4-2.5H6.5A2.5 2.5 0 0 1 4 13.5v-8Z"/></svg>
+<div>
+<h4>Ongoing assistance</h4>
+
 </div>
 </div>
 
@@ -1655,26 +1717,22 @@ No hidden software fees. No surprise charges.
 <div>
 <h4>Fair pricing, thoughtfully set</h4>
 <p>
-Every studio and teacher has different needs, so pricing is worked
-out together rather than off a fixed list — based on your goals and
-features, so you always feel it reflects genuine value.
+The table above covers the most common needs, but every studio and
+teacher is a little different — so if your goals call for something
+outside these packages, we'll work out fair pricing together, based
+on genuine value rather than guesswork.
 </p>
 </div>
 </div>
 
-<div class="divider"></div>
+</div>
 
-<div>
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 5c-2.5 4.6-9.5 9-9.5 9Z"/></svg>
-<div>
+<div class="pricing-freetext">
 <h4>A relationship, not just a transaction</h4>
 <p>
 More than a one-off project, I hope to build something lasting —
 grounded in trust, care, and consistently good work.
 </p>
-</div>
-</div>
-
 </div>
 
 </div>

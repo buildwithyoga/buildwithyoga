@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO tags -->
+<title>Pricing | Ramya S | Yoga Website Design | BuildWithYoga</title>
+<meta name="description" content="Simple, one-time pricing for yoga websites — whether you're starting from scratch with no domain, already have one, or need payments and bookings built in. No monthly fees, ever.">
+<meta name="robots" content="index, follow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Work+Sans:wght@400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --linen:#FAF7F1;
+    --card:#FFFFFF;
+    --ink:#1E2B22;
+    --ink-soft:#465148;
+    --gold:#B8935A;
+    --gold-soft:#DCC79A;
+    --sage:#7E9683;
+    --line:#E5DFD1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@media(prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; }
+}
+
+a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+}
+
+html, body{
+    min-height:100%;
+}
+
+body{
+    background:var(--linen);
+    color:var(--ink);
+    font-family:'Work Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    min-height:100vh;
+    background:var(--linen);
+    display:flex;
+    flex-direction:column;
+}
+
+footer{
+    margin-top:auto;
+}
+
+@media(min-width:1400px){
+    .hero, .section, footer{ padding-left:120px; padding-right:120px; }
+    .pricing{ margin-left:120px; margin-right:120px; }
+    .hero h1{ font-size:64px; }
+    .hero p{ font-size:19px; }
+}
+
+.eyebrow{
+    font-size:13px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--sage);
+    font-weight:600;
+}
+
+/* ---------------- Botanical accents ---------------- */
+
+.script-accent{
+    font-family:'Dancing Script',cursive;
+    font-weight:700;
+    letter-spacing:.01em;
+}
+
+.corner-leaf{
+    position:absolute;
+    width:78px;
+    height:104px;
+    color:var(--sage);
+    opacity:.55;
+    pointer-events:none;
+    z-index:-1;
+}
+
+.corner-leaf--tl{ top:-6px; left:-2px; }
+.corner-leaf--tr{ bottom:-6px; right:-2px; transform:scaleX(-1); }
+.corner-leaf--bl{ bottom:-6px; left:-2px; transform:scaleY(-1); color:var(--gold-soft); }
+.corner-leaf--br{ bottom:-6px; right:-2px; transform:scale(-1,-1); color:var(--gold-soft); }
+
+footer .corner-leaf{ opacity:.4; }
+
+@media(max-width:760px){
+    .corner-leaf{ display:none; }
+}
+
+.leaf-divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    width:100%;
+    max-width:260px;
+    margin:10px auto;
+}
+
+.leaf-divider::before,
+.leaf-divider::after{
+    content:"";
+    flex:1;
+    height:0;
+    border-top:1px dashed var(--line);
+}
+
+.leaf-divider svg{
+    width:15px;
+    height:15px;
+    color:var(--sage);
+    flex-shrink:0;
+}
+
+footer .leaf-divider::before,
+footer .leaf-divider::after{
+    border-top:1px dashed rgba(250,247,241,.25);
+}
+
+footer .leaf-divider svg{
+    color:var(--gold-soft);
+}
+
+/* ---------------- Hero (compact, pricing-only page) ---------------- */
+
+.hero{
+    padding:64px 60px 46px;
+    position:relative;
+    z-index:0;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+    text-align:center;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:52px;
+    line-height:1.1;
+    margin-top:18px;
+    color:var(--ink);
+}
+
+.hero h1 em{
+    font-style:italic;
+    color:var(--gold);
+    font-weight:500;
+}
+
+.hero p{
+    margin:22px auto 0;
+    font-size:17px;
+    line-height:1.75;
+    max-width:600px;
+    color:var(--ink-soft);
+}
+
+.ribbon{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--sage);
+    font-weight:600;
+}
+
+.ribbon::before, .ribbon::after{
+    content:"";
+    width:20px;
+    height:1px;
+    background:var(--sage);
+}
+
+.hero .ribbon{ justify-content:center; }
+
+/* ---------------- Section shell ---------------- */
+
+.section{
+    padding:56px 60px 20px;
+}
+
+.section-head{
+    display:flex;
+    align-items:baseline;
+    gap:16px;
+    margin-bottom:14px;
+}
+
+.section h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:38px;
+    color:var(--ink);
+}
+
+.section-sub{
+    color:var(--ink-soft);
+    font-size:16px;
+    line-height:1.6;
+    max-width:680px;
+    margin-bottom:34px;
+}
+
+.rule{
+    flex:1;
+    height:1px;
+    background:var(--line);
+}
+
+/* ---------------- Horizontal plan banner ---------------- */
+
+.plan-scroller{
+    display:flex;
+    gap:26px;
+    overflow-x:auto;
+    padding:6px 6px 26px;
+    margin:0 -6px;
+    scroll-snap-type:x proximity;
+    scrollbar-width:thin;
+    scrollbar-color:var(--gold-soft) transparent;
+}
+
+.plan-scroller::-webkit-scrollbar{ height:8px; }
+.plan-scroller::-webkit-scrollbar-thumb{ background:var(--gold-soft); border-radius:10px; }
+.plan-scroller::-webkit-scrollbar-track{ background:transparent; }
+
+.plan-card{
+    scroll-snap-align:start;
+    flex:0 0 280px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:26px 24px 28px;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 1px 2px rgba(30,43,34,.04), 0 14px 28px -20px rgba(30,43,34,.18);
+    transition:transform .3s ease, box-shadow .3s ease;
+    position:relative;
+}
+
+.plan-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 6px 14px rgba(30,43,34,.06), 0 22px 34px -18px rgba(30,43,34,.24);
+}
+
+.plan-card.featured{
+    border-color:var(--gold-soft);
+    box-shadow:0 1px 2px rgba(30,43,34,.04), 0 18px 34px -18px rgba(184,147,90,.35);
+}
+
+.plan-badge{
+    position:absolute;
+    top:-11px;
+    left:24px;
+    background:var(--ink);
+    color:var(--linen);
+    font-size:10.5px;
+    font-weight:600;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:20px;
+}
+
+.plan-icon{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:var(--linen);
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:16px;
+    flex-shrink:0;
+}
+
+.plan-icon svg{
+    width:26px;
+    height:26px;
+    color:var(--gold);
+}
+
+.plan-pain{
+    font-size:13px;
+    line-height:1.5;
+    color:var(--sage);
+    font-weight:600;
+    margin-bottom:10px;
+    min-height:40px;
+}
+
+.plan-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:23px;
+    color:var(--ink);
+    margin-bottom:6px;
+}
+
+.plan-scope{
+    font-size:12.5px;
+    color:var(--ink-soft);
+    opacity:.85;
+    margin-bottom:14px;
+}
+
+.plan-desc{
+    font-size:14.5px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+}
+
+.plan-price{
+    display:flex;
+    align-items:baseline;
+    gap:9px;
+    padding-top:14px;
+    border-top:1px dashed var(--line);
+    margin-bottom:18px;
+}
+
+.plan-price .was{
+    font-size:14px;
+    color:var(--ink-soft);
+    text-decoration:line-through;
+    opacity:.65;
+}
+
+.plan-price .now{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:27px;
+    color:var(--ink);
+}
+
+.plan-price .now em{
+    font-style:normal;
+    color:var(--gold);
+}
+
+.plan-note{
+    font-size:12px;
+    color:var(--sage);
+    font-weight:600;
+    margin-top:-12px;
+    margin-bottom:16px;
+}
+
+.plan-features{
+    list-style:none;
+    margin:0 0 22px;
+    padding:0;
+    flex:1;
+}
+
+.plan-features li{
+    display:flex;
+    gap:9px;
+    align-items:flex-start;
+    font-size:13.5px;
+    line-height:1.55;
+    color:var(--ink);
+    padding:6px 0;
+}
+
+.plan-features li svg{
+    width:15px;
+    height:15px;
+    color:var(--sage);
+    flex-shrink:0;
+    margin-top:2px;
+}
+
+.plan-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:11px 18px;
+    background:var(--ink);
+    color:var(--linen);
+    border-radius:22px;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:.03em;
+    text-decoration:none;
+    transition:background .2s ease, transform .2s ease;
+}
+
+.plan-cta:hover{
+    background:var(--gold);
+    transform:translateY(-1px);
+}
+
+.plan-cta svg{ width:14px; height:14px; }
+
+.scroller-hint{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink-soft);
+    font-size:12.5px;
+    opacity:.75;
+    margin-bottom:24px;
+}
+
+.scroller-hint svg{ width:15px; height:15px; color:var(--sage); }
+
+@media(min-width:900px){
+    .scroller-hint{ display:none; }
+}
+
+/* ---------------- One-time build explainer ---------------- */
+
+.pricing{
+    margin:20px 60px 60px;
+    padding:44px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    position:relative;
+    box-shadow:0 1px 2px rgba(30,43,34,.03), 0 24px 48px -30px rgba(30,43,34,.18);
+}
+
+.pricing .section-head{ margin-bottom:10px; }
+.pricing .ribbon{ margin-bottom:24px; }
+.pricing .ribbon::after{ display:none; }
+
+.pricing-note{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    margin-top:32px;
+    padding:26px 32px;
+    background:var(--linen);
+    border:1px solid var(--line);
+    border-radius:4px;
+}
+
+.pricing-note .divider{
+    width:1px;
+    align-self:stretch;
+    background:var(--line);
+    flex:0 0 1px;
+}
+
+.pricing-note > div:not(.divider){
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    flex:1;
+}
+
+.pricing-note svg{
+    width:24px;
+    height:24px;
+    color:var(--gold);
+    flex-shrink:0;
+    margin-top:2px;
+}
+
+.pricing-note h4{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--ink);
+    font-size:19px;
+    margin-bottom:4px;
+}
+
+.pricing-note p{
+    color:var(--ink-soft);
+    line-height:1.6;
+    font-size:15px;
+}
+
+.assurance-list{
+    margin-top:10px;
+    padding:0;
+    list-style:none;
+}
+
+.assurance-list li{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    padding:12px 0;
+    border-top:1px solid var(--line);
+}
+
+.assurance-list li span.dot{
+    color:var(--gold);
+    font-weight:600;
+    flex-shrink:0;
+}
+
+.assurance-list li span.txt{
+    color:var(--ink-soft);
+    line-height:1.6;
+    font-size:15.5px;
+}
+
+.assurance-list li span.txt strong{
+    color:var(--ink);
+}
+
+.addon-box{
+    margin-top:20px;
+    padding:30px 34px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:4px;
+}
+
+.addon-box h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:22px;
+    color:var(--ink);
+    margin-bottom:4px;
+}
+
+.addon-box .addon-sub{
+    color:var(--ink-soft);
+    font-size:14.5px;
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.addon-list{
+    padding:0;
+    list-style:none;
+    margin:0;
+}
+
+.addon-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:12px 0;
+    border-top:1px solid var(--line);
+    font-size:14.5px;
+    color:var(--ink-soft);
+    line-height:1.55;
+}
+
+.addon-list li:last-child{
+    border-bottom:1px solid var(--line);
+}
+
+.addon-list li svg{
+    width:16px;
+    height:16px;
+    color:var(--sage);
+    flex-shrink:0;
+    margin-top:2px;
+}
+
+.addon-list li strong{
+    color:var(--ink);
+}
+
+/* ---------------- Floating WhatsApp ---------------- */
+
+.wa-float{
+    position:fixed;
+    right:24px;
+    top:24px;
+    z-index:50;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:12px;
+}
+
+.wa-btn{
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 10px 24px -8px rgba(37,211,102,.55), 0 2px 6px rgba(30,43,34,.15);
+    transition:transform .25s ease, box-shadow .25s ease;
+    flex-shrink:0;
+    position:relative;
+}
+
+.wa-btn:hover{
+    transform:translateY(-2px) scale(1.05);
+    box-shadow:0 14px 28px -8px rgba(37,211,102,.6), 0 2px 6px rgba(30,43,34,.18);
+}
+
+.wa-btn svg{
+    width:29px;
+    height:29px;
+    color:#fff;
+}
+
+.wa-pulse{
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:#25D366;
+    opacity:.55;
+    animation:wa-pulse-ring 2.6s ease-out infinite;
+}
+
+@keyframes wa-pulse-ring{
+    0%{ transform:scale(1); opacity:.5; }
+    100%{ transform:scale(1.9); opacity:0; }
+}
+
+@media(max-width:900px){
+    .wa-float{ right:16px; top:auto; bottom:16px; }
+    .wa-btn{ width:52px; height:52px; }
+}
+
+/* ---------------- Contact / footer ---------------- */
+
+.contact-list{
+    display:flex;
+    align-items:center;
+    gap:26px;
+    margin-top:22px;
+}
+
+.contact-list a{
+    color:var(--gold-soft);
+    display:flex;
+    transition:color .2s ease, transform .2s ease;
+}
+
+.contact-list a:hover{
+    color:var(--linen);
+    transform:translateY(-2px);
+}
+
+.contact-list svg{
+    width:20px;
+    height:20px;
+}
+
+footer{
+    background:var(--ink);
+    color:var(--linen);
+    padding:56px 60px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.terms{
+    text-align:center;
+    font-size:12px;
+    color:var(--ink-soft);
+    opacity:.7;
+    padding:18px 20px 26px;
+}
+
+/* ---------------- Mobile ---------------- */
+
+@media(max-width:900px){
+
+.hero{ padding:44px 26px 34px; }
+.hero h1{ font-size:36px; }
+
+.section{ padding:40px 22px 10px; }
+.section h2{ font-size:28px; }
+
+.pricing{ margin:10px 16px 40px; padding:26px 22px; }
+
+.plan-scroller{ padding-left:2px; }
+
+.pricing-note{ flex-direction:column; align-items:stretch; gap:22px; }
+.pricing-note .divider{ width:100%; height:1px; }
+
+footer{ padding:40px 26px; }
+.contact-list{ gap:20px; }
+
+}
+
+@media(max-width:480px){
+.plan-card{ flex-basis:250px; }
+.contact-list{ gap:16px; }
+.hero{ padding:36px 20px 28px; }
+.hero h1{ font-size:30px; }
+.hero p{ font-size:15.5px; }
+.section{ padding:32px 18px 8px; }
+.pricing{ margin:8px 12px 32px; padding:22px 18px; }
+.addon-box{ padding:20px 16px; }
+.addon-list li{ flex-direction:column; align-items:flex-start; gap:4px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wa-float">
+<a class="wa-btn" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27d%20like%20a%20quote%20for%20a%20yoga%20website." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+<div class="wa-pulse"></div>
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8 1-.2.2-.3.2-.5.1-.2-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.6-1.4-1.8-.2-.2 0-.4.1-.5l.4-.4c.1-.1.2-.2.2-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.5-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 3 4.7 4.1.7.3 1.2.4 1.6.5.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+</div>
+
+<div class="container">
+
+<section class="hero">
+
+<svg class="corner-leaf corner-leaf--tl" viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+<path d="M10 150 C30 120 25 80 55 40 C70 20 85 15 100 10"/>
+<ellipse cx="30" cy="120" rx="14" ry="7" transform="rotate(-35 30 120)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="45" cy="90" rx="13" ry="6.5" transform="rotate(-25 45 90)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="60" cy="65" rx="12" ry="6" transform="rotate(-15 60 65)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="78" cy="42" rx="11" ry="5.5" transform="rotate(-5 78 42)" fill="currentColor" fill-opacity=".3"/>
+</svg>
+
+<div class="ribbon">Reasonably priced &middot; One-time build</div>
+<h1>A package for wherever <em>you</em> are starting from.</h1>
+<p>
+Whether you've never touched a website before, or you're ready to accept payments online &mdash; there's a plan built around exactly what you need. No monthly fees, no surprises.
+</p>
+<p style="margin-top:18px;"><a href="index.html" style="color:var(--sage); font-size:13.5px; font-weight:600; text-decoration:none; letter-spacing:.02em;">&larr; Back to home</a></p>
+
+</section>
+
+<section class="section">
+
+<div class="section-head">
+<h2>Find your fit</h2>
+<div class="rule"></div>
+</div>
+<p class="section-sub">Every plan below solves a different starting point. Scroll across to compare &mdash; pick the one that matches where you are today.</p>
+
+<div class="scroller-hint">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg>
+Swipe to see all plans
+</div>
+
+<div class="plan-scroller">
+
+<!-- Plan 1: Starter without domain -->
+<div class="plan-card">
+<div class="plan-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/></svg>
+</div>
+<div class="plan-pain">&ldquo;I have no website, no domain, and no idea where to start.&rdquo;</div>
+<h3>Starter &mdash; No Domain</h3>
+<div class="plan-scope">1&ndash;3 pages</div>
+<p class="plan-desc">Perfect if you have zero computer or website knowledge, don't own a domain yet, and just need a simple, professional online presence to begin with.</p>
+<div class="plan-price">
+<span class="was">&#8377;10,000</span>
+<span class="now"><em>&#8377;6,499</em></span>
+</div>
+<ul class="plan-features">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Hosted on Cloudflare Pages (free SSL, fast CDN)</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Enquiry form</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Basic on-page SEO</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>You don't have to do anything &mdash; I handle it end-to-end</li>
+</ul>
+<p class="plan-note">If you choose a domain later, that renewal is billed directly by the registrar &mdash; not by me.</p>
+<a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20the%20Starter%20(No%20Domain)%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<!-- Plan 2: Starter with domain -->
+<div class="plan-card">
+<div class="plan-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.7 5.3 3.7 8.5s-1.3 6.2-3.7 8.5c-2.4-2.3-3.7-5.3-3.7-8.5S9.6 5.8 12 3.5Z"/></svg>
+</div>
+<div class="plan-pain">&ldquo;I already own a domain &mdash; I just need a creative, mobile-friendly site.&rdquo;</div>
+<h3>Starter &mdash; With Domain</h3>
+<div class="plan-scope">1&ndash;3 pages</div>
+<p class="plan-desc">You bring the domain, I bring the design &mdash; a responsive, creative site that looks great on every screen, connected to the address you already own.</p>
+<div class="plan-price">
+<span class="was">&#8377;7,000</span>
+<span class="now"><em>&#8377;4,999</em></span>
+</div>
+<ul class="plan-features">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Hosted on Cloudflare Pages (free SSL, fast CDN)</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Enquiry form</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Basic on-page SEO</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Fully responsive across mobile, tablet, desktop</li>
+</ul>
+<a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20the%20Starter%20(With%20Domain)%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<!-- Plan 3: Standard -->
+<div class="plan-card featured">
+<div class="plan-badge">Most popular</div>
+<div class="plan-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-7-10.6A7 7 0 0 1 12 4a7 7 0 0 1 7 6.4C19 16.6 12 21 12 21Z"/><circle cx="12" cy="10.4" r="2.4"/></svg>
+</div>
+<div class="plan-pain">&ldquo;I want more pages, and students to find my studio on maps and social.&rdquo;</div>
+<h3>Standard</h3>
+<div class="plan-scope">3&ndash;5 pages</div>
+<p class="plan-desc">Everything in Starter, with room to grow &mdash; more pages to tell your story, plus Google Maps and social media integration so students can find and follow you.</p>
+<div class="plan-price">
+<span class="was">&#8377;11,000</span>
+<span class="now"><em>&#8377;8,999</em></span>
+</div>
+<ul class="plan-features">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Everything in Starter</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Responsive 3&ndash;5 page site</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Google Maps integration</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Social media integration</li>
+</ul>
+<a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20the%20Standard%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<!-- Plan 4: Professional -->
+<div class="plan-card">
+<div class="plan-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 9.5h19"/><path d="M6 14.5h5"/></svg>
+</div>
+<div class="plan-pain">&ldquo;I need students to pay and book classes or workshops online.&rdquo;</div>
+<h3>Professional</h3>
+<div class="plan-scope">3&ndash;5 pages</div>
+<p class="plan-desc">Everything in Standard, plus secure Razorpay payment and booking integration &mdash; so class fees and workshop registrations are collected without any back-and-forth.</p>
+<div class="plan-price">
+<span class="was">&#8377;15,000</span>
+<span class="now"><em>&#8377;13,999</em></span>
+</div>
+<ul class="plan-features">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Everything in Standard</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Razorpay payment integration</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Class &amp; workshop booking</li>
+</ul>
+<a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20the%20Professional%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<!-- Plan 5: Custom -->
+<div class="plan-card">
+<div class="plan-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5 9-5Z"/><path d="M3 13l9 5 9-5"/></svg>
+</div>
+<div class="plan-pain">&ldquo;I run a bigger studio and want ongoing creative direction and SEO oversight.&rdquo;</div>
+<h3>Custom</h3>
+<div class="plan-scope">Scoped to your studio</div>
+<p class="plan-desc">For studios with larger ambitions &mdash; multiple creative directions to choose from, hands-on feedback on the design, and a full year of SEO and Google Search Console monitoring.</p>
+<div class="plan-price">
+<span class="now"><em>Custom quote</em></span>
+</div>
+<ul class="plan-features">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Multiple creative concepts to choose from</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Suggestions &amp; feedback rounds on the creative</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>SEO &amp; Search Console monitoring for a year</li>
+</ul>
+<a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20a%20Custom%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+</div>
+
+<div class="addon-box">
+<h3>Add-ons &mdash; for studios that need a bit more</h3>
+<p class="addon-sub">Layer these onto any package as your studio grows. Exact scope and cost are always confirmed with you before any work begins.</p>
+<ul class="addon-list">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Additional instructor profile / bio page</strong></span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Additional location/branch page</strong> &mdash; with its own Maps &amp; schedule</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Membership / recurring subscription plans</strong> via Razorpay</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Extra content/landing page</strong> &mdash; offers, events, workshops</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Branded email setup</strong> &mdash; if not already included in your package</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Blog / articles section</strong> for sharing tips, updates and class news</span></li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span><strong>WhatsApp/SMS class reminders</strong> for upcoming sessions and workshops</span></li>
+</ul>
+</div>
+
+</section>
+
+<section class="pricing">
+
+<div class="ribbon">Why it stays affordable</div>
+
+<p style="color:var(--ink-soft); line-height:1.7; font-size:16px;">
+Unlike most agencies that host your site on their own infrastructure and start charging monthly or annual &ldquo;maintenance&rdquo; fees after the first free year, your website is built on <strong style="color:var(--ink);">Cloudflare Pages</strong>, a free hosting platform &mdash; so once it's built, you will never receive a hosting bill.
+</p>
+
+<ul class="assurance-list">
+<li><span class="dot">&#8226;</span><span class="txt"><strong>One-time setup, not a subscription.</strong> No recurring fees, and no risk of your site going down if a payment is missed.</span></li>
+<li><span class="dot">&#8226;</span><span class="txt"><strong>Only your domain renews annually</strong> &mdash; e.g. yourstudio.in &mdash; and it's billed directly by the domain registrar, not by me.</span></li>
+<li><span class="dot">&#8226;</span><span class="txt"><strong>If the domain lapses,</strong> only that custom address stops resolving &mdash; your website itself stays live and safe.</span></li>
+<li><span class="dot">&#8226;</span><span class="txt"><strong>Renewal is your choice.</strong> Do it yourself anytime, or I can handle it.</span></li>
+<li><span class="dot">&#8226;</span><span class="txt"><strong>No hidden charges.</strong> Any third-party costs such as payment gateways, premium plugins, hosting upgrades or SMS/WhatsApp services will always be discussed and approved before implementation.</span></li>
+<li style="border-bottom:1px solid var(--line);"><span class="dot">&#8226;</span><span class="txt"><strong>Ongoing assistance.</strong> Need a content update, a new feature, or help renewing your domain later? Just get back to me, and we'll agree on fair, scope-based pricing before any work begins.</span></li>
+</ul>
+
+<div class="pricing-note">
+<div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3Z"/><path d="M5 16l.8 2.2L8 19l-2.2.8L5 22l-.8-2.2L2 19l2.2-.8L5 16Z"/></svg>
+<div>
+<h4>Fair pricing, thoughtfully set</h4>
+<p>
+The plans above cover the most common needs, but every studio and teacher is a little different &mdash; so if your goals call for something outside these packages, we'll work out fair pricing together, based on genuine value rather than guesswork.
+</p>
+</div>
+</div>
+
+<div class="divider"></div>
+
+<div>
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20s-7-4.4-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 5c-2.5 4.6-9.5 9-9.5 9Z"/></svg>
+<div>
+<h4>A relationship, not just a transaction</h4>
+<p>
+More than a one-off project, I hope to build something lasting &mdash; grounded in trust, care, and consistently good work.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<svg class="corner-leaf corner-leaf--bl" viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+<path d="M10 150 C30 120 25 80 55 40 C70 20 85 15 100 10"/>
+<ellipse cx="30" cy="120" rx="14" ry="7" transform="rotate(-35 30 120)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="45" cy="90" rx="13" ry="6.5" transform="rotate(-25 45 90)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="60" cy="65" rx="12" ry="6" transform="rotate(-15 60 65)" fill="currentColor" fill-opacity=".3"/>
+<ellipse cx="78" cy="42" rx="11" ry="5.5" transform="rotate(-5 78 42)" fill="currentColor" fill-opacity=".3"/>
+</svg>
+
+<h3 class="script-accent" style="font-size:32px; font-style:normal;">Let's build something calm.</h3>
+
+<div class="leaf-divider" aria-hidden="true">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.4 7-11.6A7 7 0 0 0 5 9.4C5 14.6 12 21 12 21Z"/><circle cx="12" cy="9.4" r="2.4"/></svg>
+</div>
+
+<div class="contact-list">
+<a href="mailto:buildwithyoga@gmail.com" title="buildwithyoga@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5" width="19" height="14" rx="1.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></a>
+<a href="tel:+919731313047" title="+91 97313 13047" aria-label="Phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4.5h4l2 5-2.5 1.5a11 11 0 0 0 5.5 5.5l1.5-2.5 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 2.5 6.5a2 2 0 0 1 2-2Z"/></svg></a>
+<a href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20a%20yoga%20website." target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12a8 8 0 1 1 3.2 6.4L4 20l1.3-3.4A7.96 7.96 0 0 1 4 12Z"/></svg></a>
+<a href="https://www.linkedin.com/in/ramyas86/" target="_blank" rel="noopener noreferrer" title="linkedin.com/in/ramyas86" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2.5"/><path d="M7.5 10v7M7.5 7.2v.1M11.5 17v-4.2c0-1.5 1-2.3 2.3-2.3 1.2 0 2.2.8 2.2 2.3V17"/></svg></a>
+<a href="https://www.facebook.com/profile.php?id=61591728991353" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8.5h-2c-.8 0-1.5.7-1.5 1.5v2h3.3l-.5 3H11.5V21H8.5v-6H6.5v-3h2V9.8c0-2.4 1.4-3.8 3.7-3.8h2.8v2.5Z"/></svg></a>
+<a href="https://www.instagram.com/ramyasandeep1/" target="_blank" rel="noopener noreferrer" title="instagram.com/ramyasandeep1" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg></a>
+</div>
+
+<p style="margin-top:20px; font-size:13px; opacity:0.65;">
+Indian Yoga Association (IYA) Member &middot; IYA/2025/YP8389
+</p>
+
+</footer>
+
+<div class="terms">
+* Terms &amp; Conditions apply. Detailed Terms &amp; Conditions will be provided with the project quotation.
+</div>
+
+</div>
+
+</body>
+</html>
