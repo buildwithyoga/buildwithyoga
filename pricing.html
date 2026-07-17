@@ -5,9 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Primary SEO tags -->
-<title>Pricing | Ramya S | Yoga Website Design | BuildWithYoga</title>
+<title>Yoga Website Pricing | One-Time Build, No Monthly Fees | BuildWithYoga</title>
 <meta name="description" content="Simple, one-time pricing for yoga websites — whether you're starting from scratch with no domain, already have one, or need payments and bookings built in. No monthly fees, ever.">
+<meta name="keywords" content="yoga website pricing, yoga website cost, affordable yoga website, yoga website design price, one-time payment website, no monthly subscription website, yoga studio website pricing, yoga teacher website cost, yoga website packages, Cloudflare hosted website, yoga booking website pricing, yoga website with payment integration, Ramya S yoga website designer">
+<meta name="author" content="Ramya S">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://buildwithyoga.github.io/buildwithyoga/pricing.html">
+
+<!-- Open Graph / social sharing tags -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yoga Website Pricing | One-Time Build, No Monthly Fees | BuildWithYoga">
+<meta property="og:description" content="Simple, one-time pricing for yoga websites — whether you're starting from scratch with no domain, already have one, or need payments and bookings built in. No monthly fees, ever.">
+<meta property="og:url" content="https://buildwithyoga.github.io/buildwithyoga/pricing.html">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yoga Website Pricing | One-Time Build, No Monthly Fees | BuildWithYoga">
+<meta name="twitter:description" content="Simple, one-time pricing for yoga websites — whether you're starting from scratch with no domain, already have one, or need payments and bookings built in. No monthly fees, ever.">
+
+<!-- Structured data for Google (JSON-LD, schema.org OfferCatalog) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Yoga Website Design",
+  "provider": {
+    "@type": "Person",
+    "name": "Ramya S",
+    "email": "buildwithyoga@gmail.com",
+    "telephone": "+91-97313-13047",
+    "sameAs": ["https://www.linkedin.com/in/ramyas86/", "https://www.facebook.com/profile.php?id=61591728991353", "https://www.instagram.com/ramyasandeep1/"]
+  },
+  "areaServed": "IN",
+  "description": "One-time pricing packages for yoga teacher and studio websites, from a simple starter site to full booking-and-payments builds. No monthly or yearly subscription fees.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Yoga Website Packages",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Starter - No Domain", "price": "6499", "priceCurrency": "INR" },
+      { "@type": "Offer", "name": "Starter - With Domain", "price": "4999", "priceCurrency": "INR" },
+      { "@type": "Offer", "name": "Standard", "price": "8999", "priceCurrency": "INR" },
+      { "@type": "Offer", "name": "Professional", "price": "13999", "priceCurrency": "INR" },
+      { "@type": "Offer", "name": "Custom", "priceCurrency": "INR", "description": "Custom quote based on scope" }
+    ]
+  }
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -421,6 +465,56 @@ footer .leaf-divider svg{
 
 .plan-cta svg{ width:14px; height:14px; }
 
+.plan-scroller-wrap{
+    position:relative;
+}
+
+.scroll-arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    background:var(--card);
+    border:1.5px solid var(--gold-soft);
+    color:var(--ink);
+    cursor:pointer;
+    box-shadow:0 4px 14px rgba(30,43,34,0.14);
+    z-index:5;
+    transition:background .18s ease, border-color .18s ease, transform .18s ease;
+}
+
+.scroll-arrow--left{ left:-6px; }
+.scroll-arrow--right{ right:-6px; }
+
+.scroll-arrow svg{ width:18px; height:18px; }
+
+.scroll-arrow:hover{
+    background:var(--gold);
+    border-color:var(--gold);
+    color:#fff;
+    transform:translateY(-50%) scale(1.06);
+}
+
+.scroll-arrow:active{ transform:translateY(-50%) scale(.93); }
+
+.scroll-arrow:disabled{
+    opacity:.35;
+    cursor:default;
+    background:var(--card);
+    border-color:var(--line);
+    color:var(--ink-soft);
+    transform:translateY(-50%);
+}
+
+@media(max-width:900px){
+    .scroll-arrow{ display:none; }
+}
+
 .scroller-hint{
     display:flex;
     align-items:center;
@@ -700,7 +794,17 @@ footer{
 
 .pricing{ margin:10px 16px 40px; padding:26px 22px; }
 
-.plan-scroller{ padding-left:2px; }
+.scroller-hint{ display:none; }
+
+.plan-scroller{
+    flex-direction:column;
+    overflow-x:visible;
+    scroll-snap-type:none;
+    padding:2px 2px 2px;
+    margin:0;
+}
+
+.plan-card{ flex:1 1 auto; width:100%; }
 
 .pricing-note{ flex-direction:column; align-items:stretch; gap:22px; }
 .pricing-note .divider{ width:100%; height:1px; }
@@ -711,7 +815,6 @@ footer{ padding:40px 26px; }
 }
 
 @media(max-width:480px){
-.plan-card{ flex-basis:250px; }
 .contact-list{ gap:16px; }
 .hero{ padding:36px 20px 28px; }
 .hero h1{ font-size:30px; }
@@ -761,40 +864,23 @@ Whether you've never touched a website before, or you're ready to accept payment
 <h2>Find your fit</h2>
 <div class="rule"></div>
 </div>
-<p class="section-sub">Every plan below solves a different starting point. Scroll across to compare &mdash; pick the one that matches where you are today.</p>
+<p class="section-sub">Every plan below solves a different starting point &mdash; pick the one that matches where you are today.</p>
 
 <div class="scroller-hint">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg>
 Swipe to see all plans
 </div>
 
+<div class="plan-scroller-wrap">
+
+<button type="button" class="scroll-arrow scroll-arrow--left" id="scrollLeft" aria-label="Scroll to previous plan">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg>
+</button>
+
 <div class="plan-scroller">
 
-<!-- Plan 1: Starter without domain -->
-<div class="plan-card">
-<div class="plan-icon">
-<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/></svg>
-</div>
-<div class="plan-pain">&ldquo;I have no website, no domain, and no idea where to start.&rdquo;</div>
-<h3>Starter &mdash; No Domain</h3>
-<div class="plan-scope">1&ndash;3 pages</div>
-<p class="plan-desc">Perfect if you have zero computer or website knowledge, don't own a domain yet, and just need a simple, professional online presence to begin with.</p>
-<div class="plan-price">
-<span class="was">&#8377;10,000</span>
-<span class="now"><em>&#8377;6,499</em></span>
-</div>
-<ul class="plan-features">
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Hosted on Cloudflare Pages (free SSL, fast CDN)</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Enquiry form</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Basic on-page SEO</li>
-<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>You don't have to do anything &mdash; I handle it end-to-end</li>
-</ul>
-<p class="plan-note">If you choose a domain later, that renewal is billed directly by the registrar &mdash; not by me.</p>
-<a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20the%20Starter%20(No%20Domain)%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</div>
-
-<!-- Plan 2: Starter with domain -->
-<div class="plan-card">
+<!-- Plan 2: Starter with domain (moved to first position) -->
+<div class="plan-card" id="plan-with-domain">
 <div class="plan-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.7 5.3 3.7 8.5s-1.3 6.2-3.7 8.5c-2.4-2.3-3.7-5.3-3.7-8.5S9.6 5.8 12 3.5Z"/></svg>
 </div>
@@ -815,8 +901,32 @@ Swipe to see all plans
 <a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20the%20Starter%20(With%20Domain)%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </div>
 
+<!-- Plan 1: Starter without domain (moved to second position) -->
+<div class="plan-card" id="plan-no-domain">
+<div class="plan-icon">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><circle cx="12" cy="12" r="3.2"/></svg>
+</div>
+<div class="plan-pain">&ldquo;I have no website, no domain, and no idea where to start.&rdquo;</div>
+<h3>Starter &mdash; No Domain</h3>
+<div class="plan-scope">1&ndash;3 pages</div>
+<p class="plan-desc">Perfect if you have zero computer or website knowledge and don't own a domain yet &mdash; I'll register one for you and set up a simple, professional online presence to begin with.</p>
+<div class="plan-price">
+<span class="was">&#8377;10,000</span>
+<span class="now"><em>&#8377;6,499</em></span>
+</div>
+<ul class="plan-features">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Domain registered and set up for you</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Hosted on Cloudflare Pages (free SSL, fast CDN)</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Enquiry form</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Basic on-page SEO</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>You don't have to do anything &mdash; I handle it end-to-end</li>
+</ul>
+<p class="plan-note">The domain's first-year registration is included; renewals after that are billed directly by the registrar &mdash; not by me.</p>
+<a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20the%20Starter%20(No%20Domain)%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
 <!-- Plan 3: Standard -->
-<div class="plan-card featured">
+<div class="plan-card featured" id="plan-standard">
 <div class="plan-badge">Most popular</div>
 <div class="plan-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.4-7-10.6A7 7 0 0 1 12 4a7 7 0 0 1 7 6.4C19 16.6 12 21 12 21Z"/><circle cx="12" cy="10.4" r="2.4"/></svg>
@@ -839,7 +949,7 @@ Swipe to see all plans
 </div>
 
 <!-- Plan 4: Professional -->
-<div class="plan-card">
+<div class="plan-card" id="plan-professional">
 <div class="plan-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 9.5h19"/><path d="M6 14.5h5"/></svg>
 </div>
@@ -860,7 +970,7 @@ Swipe to see all plans
 </div>
 
 <!-- Plan 5: Custom -->
-<div class="plan-card">
+<div class="plan-card" id="plan-custom">
 <div class="plan-icon">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l9 5-9 5-9-5 9-5Z"/><path d="M3 13l9 5 9-5"/></svg>
 </div>
@@ -878,6 +988,12 @@ Swipe to see all plans
 </ul>
 <a class="plan-cta" href="https://wa.me/919731313047?text=Hi%20Ramya%2C%20I%27m%20interested%20in%20a%20Custom%20package." target="_blank" rel="noopener noreferrer">Enquire<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </div>
+
+</div>
+
+<button type="button" class="scroll-arrow scroll-arrow--right" id="scrollRight" aria-label="Scroll to next plan">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>
+</button>
 
 </div>
 
@@ -977,6 +1093,46 @@ Indian Yoga Association (IYA) Member &middot; IYA/2025/YP8389
 </div>
 
 </div>
+
+<script>
+(function(){
+    var scroller = document.querySelector('.plan-scroller');
+    var leftBtn = document.getElementById('scrollLeft');
+    var rightBtn = document.getElementById('scrollRight');
+    if(!scroller || !leftBtn || !rightBtn) return;
+
+    function step(){
+        var card = scroller.querySelector('.plan-card');
+        if(!card) return scroller.clientWidth * 0.8;
+        var style = getComputedStyle(scroller);
+        var gap = parseFloat(style.gap || style.columnGap || 26) || 26;
+        return card.getBoundingClientRect().width + gap;
+    }
+
+    function updateButtons(){
+        var max = scroller.scrollWidth - scroller.clientWidth - 2;
+        leftBtn.disabled = scroller.scrollLeft <= 2;
+        rightBtn.disabled = scroller.scrollLeft >= max;
+    }
+
+    leftBtn.addEventListener('click', function(){
+        scroller.scrollBy({ left: -step(), behavior:'smooth' });
+    });
+
+    rightBtn.addEventListener('click', function(){
+        scroller.scrollBy({ left: step(), behavior:'smooth' });
+    });
+
+    var scrollTimer;
+    scroller.addEventListener('scroll', function(){
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(updateButtons, 100);
+    });
+
+    window.addEventListener('resize', updateButtons);
+    updateButtons();
+})();
+</script>
 
 </body>
 </html>

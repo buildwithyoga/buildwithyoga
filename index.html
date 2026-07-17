@@ -1262,6 +1262,26 @@ footer{
 
 }
 
+/* Justify body copy on mobile so text fills the line edge-to-edge instead
+   of leaving a ragged right edge. Headline/intro text that's intentionally
+   centered (hero, tagline) is reset back to center afterward. */
+@media(max-width:760px){
+
+p{
+    text-align:justify;
+    text-align-last:left;
+    -webkit-hyphens:auto;
+    hyphens:auto;
+}
+
+.hero p,
+.tagline p{
+    text-align:center;
+    text-align-last:center;
+}
+
+}
+
 @media(max-width:480px){
 
 .contact-list{
