@@ -1019,6 +1019,138 @@ footer .leaf-divider svg{
     line-height:1.35;
 }
 
+/* ---------------- Hero checklist ---------------- */
+
+.hero-check{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 24px;
+    list-style:none;
+    margin-top:20px;
+}
+
+.hero-check li{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink-soft);
+    letter-spacing:.01em;
+}
+
+.hero-check svg{
+    width:17px;
+    height:17px;
+    color:var(--gold);
+    flex-shrink:0;
+}
+
+/* ---------------- How it works ---------------- */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:36px;
+    margin-top:36px;
+    text-align:center;
+}
+
+@media(max-width:900px){
+    .steps{ grid-template-columns:1fr; gap:32px; }
+}
+
+.step .step-num{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:40px;
+    color:var(--gold-soft);
+    line-height:1;
+    margin-bottom:10px;
+}
+
+.step h3{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    color:var(--ink);
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.step p{
+    color:var(--ink-soft);
+    line-height:1.7;
+    font-size:15.5px;
+    max-width:280px;
+    margin:0 auto;
+}
+
+/* ---------------- FAQ ---------------- */
+
+.faq{
+    max-width:700px;
+    margin:8px auto 0;
+}
+
+.faq-section .section-head{
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.faq-item{
+    border-bottom:1px solid var(--line);
+    padding:20px 2px;
+}
+
+.faq-item summary{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    cursor:pointer;
+    list-style:none;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:19px;
+    color:var(--ink);
+}
+
+.faq-item summary::-webkit-details-marker{ display:none; }
+
+.faq-item summary .plus{
+    flex-shrink:0;
+    width:22px;
+    height:22px;
+    border:1px solid var(--line);
+    border-radius:50%;
+    position:relative;
+    transition:transform .25s ease, border-color .25s ease;
+}
+
+.faq-item summary .plus::before,
+.faq-item summary .plus::after{
+    content:"";
+    position:absolute;
+    background:var(--gold);
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.faq-item summary .plus::before{ width:10px; height:1.4px; }
+.faq-item summary .plus::after{ width:1.4px; height:10px; }
+
+.faq-item[open] summary .plus{ transform:rotate(135deg); border-color:var(--gold-soft); }
+
+.faq-item p{
+    color:var(--ink-soft);
+    line-height:1.7;
+    font-size:15.5px;
+    margin-top:14px;
+    max-width:640px;
+}
+
 /* ---------------- Breath companion (signature) ---------------- */
 
 .breath-companion{
@@ -1341,7 +1473,11 @@ teachers, therapists, and studios actually need. I help yoga
 professionals attract students with a professional, reasonably priced
 online presence, so they can focus on what they do best.
 </p>
-<p style="margin-top:10px; font-size:14px; opacity:0.75;">
+<ul class="hero-check">
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>One-time build</li>
+<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l5 5L20 6"/></svg>No monthly fees, ever</li>
+</ul>
+<p style="margin-top:16px; font-size:14px; opacity:0.75;">
 Indian Yoga Association (IYA) Member &middot; IYA/2025/YP8389
 </p>
 </div>
@@ -1625,7 +1761,7 @@ Secured payment
 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3.5l2.6 5.3 5.9.8-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.8Z"/></svg>
 </div>
 
-<p class="review-quote">&ldquo;Booking classes finally feels as calm as the practice itself.&rdquo;</p>
+<p class="review-quote">&ldquo;I booked my first class in two minutes and the reminders mean I never miss a morning session.&rdquo;</p>
 
 <div class="review-who">
 <div class="review-avatar"></div>
@@ -1651,6 +1787,37 @@ Secured payment
 <span class="blog-read">Read more &rarr;</span>
 
 </div>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="section-head">
+<h2>How it works</h2>
+<div class="rule"></div>
+</div>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-num">01</div>
+<h3>We talk</h3>
+<p>A short WhatsApp or call about your classes, students and goals.</p>
+</div>
+
+<div class="step">
+<div class="step-num">02</div>
+<h3>I design</h3>
+<p>You see a real, working draft &mdash; not a slide deck &mdash; and we refine it together.</p>
+</div>
+
+<div class="step">
+<div class="step-num">03</div>
+<h3>You go live</h3>
+<p>Your site launches on Cloudflare Pages, fully yours, with no hosting bill.</p>
 </div>
 
 </div>
@@ -1754,6 +1921,44 @@ More than a one-off project, I hope to build something lasting —
 grounded in trust, care, and consistently good work.
 </p>
 </div>
+
+</div>
+
+</section>
+
+<section class="section faq-section">
+
+<div class="section-head">
+<h2>Questions teachers ask</h2>
+<div class="rule"></div>
+</div>
+
+<div class="faq">
+
+<details class="faq-item">
+<summary>Do I pay anything every month?<span class="plus"></span></summary>
+<p>No. The website build is a one-time fee. Hosting is on Cloudflare Pages, which is free. The only recurring cost is your domain name, billed once a year directly by the registrar.</p>
+</details>
+
+<details class="faq-item">
+<summary>How long does a yoga website take to build?<span class="plus"></span></summary>
+<p>A starter site is usually ready in about a week. Sites with bookings and payment integration typically take two to three weeks, depending on how quickly content and photos come together.</p>
+</details>
+
+<details class="faq-item">
+<summary>Can students book and pay for classes online?<span class="plus"></span></summary>
+<p>Yes. The Professional package includes Razorpay payment integration plus class and workshop booking, with automated confirmations and reminders.</p>
+</details>
+
+<details class="faq-item">
+<summary>Do I own the website?<span class="plus"></span></summary>
+<p>Completely. The domain, the hosting account and the code are all in your name &mdash; you are never dependent on me to keep the site running.</p>
+</details>
+
+<details class="faq-item">
+<summary>Will my site show up on Google?<span class="plus"></span></summary>
+<p>Every build ships with on-page SEO: proper titles, descriptions, structured data and fast, mobile-friendly pages. The Custom package adds a year of SEO and Search Console monitoring.</p>
+</details>
 
 </div>
 
