@@ -226,10 +226,10 @@
 
   /* ---------- audience ---------- */
   .audience{ padding:60px 0; }
-  .audience .section-head{ margin-bottom:28px; max-width:680px; }
-  .audience-list{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:12px; }
-  .audience-list li{ border:1px solid var(--line); background:var(--paper); color:var(--forest); font-weight:600; font-size:0.95rem; padding:12px 20px; border-radius:999px; }
-  .audience-close{ margin:26px 0 0; color:var(--ink-soft); line-height:1.7; max-width:60ch; }
+  .audience .section-head{ margin-bottom:28px; max-width:none; }
+  .audience-list{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:10px; }
+  .audience-list li{ border:1px solid var(--line); background:var(--paper); color:var(--forest); font-weight:600; font-size:0.92rem; padding:12px 18px; border-radius:999px; flex:1 1 auto; text-align:center; white-space:nowrap; }
+  .audience-close{ margin:26px 0 0; color:var(--ink-soft); line-height:1.7; max-width:none; }
 
   /* ---------- funnel ---------- */
   .funnel{ padding-top:68px; padding-bottom:68px; background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
@@ -340,6 +340,7 @@
     .price-grid{ grid-template-columns:repeat(3,1fr); }
   }
   @media (max-width: 900px){
+    .audience-list li{ white-space:normal; }
     .nav{ padding:12px 16px; justify-content:center; }
     .nav-links{ gap:16px; font-size:0.84rem; }
     .nav-links a.cta{ padding:8px 14px; }
@@ -418,16 +419,17 @@
       <div class="section-head">
         <span class="eyebrow">Who I build for</span>
         <h2>Built for people who serve people.</h2>
-        <p>I started with yoga teachers and studios, and now build for independent professionals whose work is built on trust.</p>
+        <p>I began with yoga teachers and studios, and now also build for wellness centers, clinics, consultants and other professionals who serve people with care.</p>
       </div>
       <ul class="audience-list">
         <li>Yoga teachers &amp; studios</li>
         <li>Wellness &amp; therapy centers</li>
         <li>Doctors &amp; clinics</li>
         <li>Lawyers &amp; consultants</li>
-        <li>Coaches, trainers &amp; other professionals</li>
+        <li>Coaches &amp; trainers</li>
+        <li>Any service-based business</li>
       </ul>
-      <p class="audience-close">Whatever your profession, you get a calm, professional website that is yours to keep.</p>
+      <p class="audience-close">Whichever field you work in, you get a clean, professional website that you own for life.</p>
     </div>
   </section>
 
